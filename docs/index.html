@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.2.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/leaflet/1.9.4/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.2.2/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href=""/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_911c6902f8d5ed6c99176f83f5b6845b {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_911c6902f8d5ed6c99176f83f5b6845b" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_911c6902f8d5ed6c99176f83f5b6845b = L.map(
+                "map_911c6902f8d5ed6c99176f83f5b6845b",
+                {
+                    center: [34.7925, 117.3225],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 13,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+            L.control.scale().addTo(map_911c6902f8d5ed6c99176f83f5b6845b);
+
+            
+
+        
+    
+            var tile_layer_c57906ccf1bb7d1ea59629cb9832ded6 = L.tileLayer(
+                "https://webrd0{s}.is.autonavi.com/appmaptile?lang=zh_cn\u0026size=1\u0026scale=1\u0026style=8\u0026x={x}\u0026y={y}\u0026z={z}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "\u9ad8\u5fb7\u5730\u56fe",
+  "subdomains": "1234",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_c57906ccf1bb7d1ea59629cb9832ded6.addTo(map_911c6902f8d5ed6c99176f83f5b6845b);
+        
+    
+            var circle_84b311a4abae69d0667ffc23f0eea47b = L.circle(
+                [34.7925, 117.3225],
+                {"bubblingMouseEvents": true, "color": "#d35400", "dashArray": "6", "dashOffset": null, "fill": false, "fillColor": "#d35400", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5000, "stroke": true, "weight": 1}
+            ).addTo(map_911c6902f8d5ed6c99176f83f5b6845b);
+        
+    
+            circle_84b311a4abae69d0667ffc23f0eea47b.bindTooltip(
+                `<div>
+                     以几何中心为圆心，5 km
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_d45ca7119acb419172fa9540c3e93e1f = L.marker(
+                [34.8, 117.32],
+                {
+}
+            ).addTo(map_911c6902f8d5ed6c99176f83f5b6845b);
+        
+    
+            var icon_ae9ba246f371e73573b1bf5a8d74b281 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3a8fcbb5d6673ab9992cae0c91300a47 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_80ed9b0c85e1b5e5e1604c8b3fdc0826 = $(`<div id="html_80ed9b0c85e1b5e5e1604c8b3fdc0826" style="width: 100.0%; height: 100.0%;"><b>家</b><br>类别：家<br>距几何中心：0.9 km</div>`)[0];
+                popup_3a8fcbb5d6673ab9992cae0c91300a47.setContent(html_80ed9b0c85e1b5e5e1604c8b3fdc0826);
+            
+        
+
+        marker_d45ca7119acb419172fa9540c3e93e1f.bindPopup(popup_3a8fcbb5d6673ab9992cae0c91300a47)
+        ;
+
+        
+    
+    
+            marker_d45ca7119acb419172fa9540c3e93e1f.bindTooltip(
+                `<div>
+                     家
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d45ca7119acb419172fa9540c3e93e1f.setIcon(icon_ae9ba246f371e73573b1bf5a8d74b281);
+            
+    
+            var marker_78d4a07f7f1631836a6178f242f1c72e = L.marker(
+                [34.8, 117.34],
+                {
+}
+            ).addTo(map_911c6902f8d5ed6c99176f83f5b6845b);
+        
+    
+            var icon_8645bf5633d27857f1466dc00257ecc2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1999b21fa30d8f4e0381899ec3f8c40a = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_c9f38568bfbd3a0962db9cb120050640 = $(`<div id="html_c9f38568bfbd3a0962db9cb120050640" style="width: 100.0%; height: 100.0%;"><b>高中</b><br>类别：学校<br>距几何中心：1.8 km</div>`)[0];
+                popup_1999b21fa30d8f4e0381899ec3f8c40a.setContent(html_c9f38568bfbd3a0962db9cb120050640);
+            
+        
+
+        marker_78d4a07f7f1631836a6178f242f1c72e.bindPopup(popup_1999b21fa30d8f4e0381899ec3f8c40a)
+        ;
+
+        
+    
+    
+            marker_78d4a07f7f1631836a6178f242f1c72e.bindTooltip(
+                `<div>
+                     高中
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_78d4a07f7f1631836a6178f242f1c72e.setIcon(icon_8645bf5633d27857f1466dc00257ecc2);
+            
+    
+            var marker_baffa47c86f574018a1b0d3436c23860 = L.marker(
+                [34.78, 117.31],
+                {
+}
+            ).addTo(map_911c6902f8d5ed6c99176f83f5b6845b);
+        
+    
+            var icon_cf82249c538c7b74ac12a05c412d7720 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ea8a0b1931245f659a3cdcc8cdfaad9c = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_d3c2f1c7b5e515bd13e1252c8a6f77fb = $(`<div id="html_d3c2f1c7b5e515bd13e1252c8a6f77fb" style="width: 100.0%; height: 100.0%;"><b>枣庄站</b><br>类别：交通<br>距几何中心：1.8 km</div>`)[0];
+                popup_ea8a0b1931245f659a3cdcc8cdfaad9c.setContent(html_d3c2f1c7b5e515bd13e1252c8a6f77fb);
+            
+        
+
+        marker_baffa47c86f574018a1b0d3436c23860.bindPopup(popup_ea8a0b1931245f659a3cdcc8cdfaad9c)
+        ;
+
+        
+    
+    
+            marker_baffa47c86f574018a1b0d3436c23860.bindTooltip(
+                `<div>
+                     枣庄站
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_baffa47c86f574018a1b0d3436c23860.setIcon(icon_cf82249c538c7b74ac12a05c412d7720);
+            
+    
+            var marker_039b0afdb06f4608ab33e951d57c53b4 = L.marker(
+                [34.79, 117.32],
+                {
+}
+            ).addTo(map_911c6902f8d5ed6c99176f83f5b6845b);
+        
+    
+            var icon_c847e20991b10febe1972908b6b36140 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_df3d0335bac82042e291537f9acf20da = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_31e6351f6bf1b78c0cfec4f7784223ce = $(`<div id="html_31e6351f6bf1b78c0cfec4f7784223ce" style="width: 100.0%; height: 100.0%;"><b>常去的商场</b><br>类别：商业<br>距几何中心：0.4 km</div>`)[0];
+                popup_df3d0335bac82042e291537f9acf20da.setContent(html_31e6351f6bf1b78c0cfec4f7784223ce);
+            
+        
+
+        marker_039b0afdb06f4608ab33e951d57c53b4.bindPopup(popup_df3d0335bac82042e291537f9acf20da)
+        ;
+
+        
+    
+    
+            marker_039b0afdb06f4608ab33e951d57c53b4.bindTooltip(
+                `<div>
+                     常去的商场
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_039b0afdb06f4608ab33e951d57c53b4.setIcon(icon_c847e20991b10febe1972908b6b36140);
+            
+    
+            map_911c6902f8d5ed6c99176f83f5b6845b.fitBounds(
+                [[34.78, 117.31], [34.8, 117.34]],
+                {}
+            );
+        
+    
+            var layer_control_fc30df4fdf69540251ffe0c1c6dbdcba_layers = {
+                base_layers : {
+                    "\u9ad8\u5fb7\u5e95\u56fe" : tile_layer_c57906ccf1bb7d1ea59629cb9832ded6,
+                },
+                overlays :  {
+                },
+            };
+            let layer_control_fc30df4fdf69540251ffe0c1c6dbdcba = L.control.layers(
+                layer_control_fc30df4fdf69540251ffe0c1c6dbdcba_layers.base_layers,
+                layer_control_fc30df4fdf69540251ffe0c1c6dbdcba_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": true,
+  "autoZIndex": true,
+}
+            ).addTo(map_911c6902f8d5ed6c99176f83f5b6845b);
+
+        
+</script>
+</html>

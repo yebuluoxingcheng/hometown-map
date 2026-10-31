@@ -3,15 +3,17 @@
 > 90 天 P0 的第一步：把「我生活的地方」变成一张能解释的地图，并发布到网上。
 > 山东科技大学 测绘与空间信息学院 · 地理信息科学 2026 级 · 2026 秋
 
+**在线地址**：https://yebuluoxingcheng.github.io/hometown-map/
+
 ## 这张图回答什么问题
 
-我常去的 5 个地方，离新城几何中心有多远？谁最远？
+我常去的 4 个地方，离几何中心有多远？谁最远？
 
 （P1 会升级成「到最近医院 / 公园的步行距离」，那是 11 月的事。）
 
 ## 本周交付
 
-- [ ] 一个能打开的网页链接（GitHub Pages）
+- [x] 一个能打开的网页链接（GitHub Pages）
 - [ ] 这份 README，含结果表和截图
 - [ ] 至少 3 条有意义的 commit
 
@@ -93,11 +95,18 @@ GitHub → Settings → Developer settings → Personal access tokens → Fine-g
 
 ## 结果
 
+几何中心取 4 个地点经纬度的算术平均，距离用 haversine 公式计算。
+
 | 地点 | 类别 | 到中心距离 (km) |
 | --- | --- | --- |
-| 运行 `python hometown_map.py` 后，把终端里的表粘到这里 | | |
+| 常去的商场 | 商业 | 0.4 |
+| 家 | 家 | 0.9 |
+| 枣庄站 | 交通 | 1.8 |
+| 高中 | 学校 | 1.8 |
 
-截图放 `docs/screenshot.png`，然后在上面这行下面贴：`![地图截图](docs/screenshot.png)`
+最远的是枣庄站和高中，约 1.8 km；4 个点都在 2 km 范围内。
+
+![地图截图](docs/screenshot.png)
 
 ## 目录
 

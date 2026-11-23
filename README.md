@@ -63,10 +63,15 @@ hometown-map/
 ├── app.py             # Streamlit 页面
 ├── qa.py              # 拼上下文、调用 DeepSeek
 ├── rate_limit.py      # 会话/每日限额
+├── blog/p0.md         # P0 复盘文章
 ├── docs/index.html    # 生成的地图（GitHub Pages 用）
 ├── metrics.csv        # 距离表
 └── requirements.txt
 ```
+
+## 博客
+
+[我用四个地点，做了张会回答问题的小地图](blog/p0.md)
 
 ## 已知限制
 

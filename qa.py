@@ -54,5 +54,6 @@ def ask(question: str) -> str:
             {"role": "system", "content": SYSTEM_PROMPT.format(context=build_context())},
             {"role": "user", "content": question},
         ],
+        max_tokens=300,
     )
     return resp.choices[0].message.content

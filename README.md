@@ -10,6 +10,7 @@
 
 - 交互地图：4 个地点、5 km 缓冲圈、每个点到几何中心的距离
 - AI 问答：根据地点数据回答“附近有什么”“谁最远”；数据里没有的，直接说不知道
+- 限额：每会话 10 问，全站每日 200 问（北京时间零点重置，以 `rate_limit.py` 常量为准）
 
 ## 怎么工作
 
@@ -61,6 +62,7 @@ hometown-map/
 ├── hometown_map.py    # 计算距离、生成地图 HTML
 ├── app.py             # Streamlit 页面
 ├── qa.py              # 拼上下文、调用 DeepSeek
+├── rate_limit.py      # 会话/每日限额
 ├── docs/index.html    # 生成的地图（GitHub Pages 用）
 ├── metrics.csv        # 距离表
 └── requirements.txt
@@ -71,6 +73,7 @@ hometown-map/
 - 单轮对话，模型不记得上一句
 - 实体对齐依赖提示词，未做代码级校验：问“三中”仍可能被当成“高中”
 - 应用公开，任何人访问都会消耗 API 额度
+- 限额计数在进程内存里，应用重启或重新部署会清零
 
 ## 关于
 
